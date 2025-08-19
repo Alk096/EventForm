@@ -12,9 +12,22 @@ body {
 
 body {
     background-color: #F1F8FF;
-    display: grid;
+    /* display: grid;
     justify-items: center;
+    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+h1{
+    min-width: 300px;
+    width: 50%;
+    text-align: left;
+    background: linear-gradient(to right,#1E3A8A,#FF6B35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .form {
@@ -51,10 +64,41 @@ body {
     outline: none;
 }
 
+.question{
+    color: #F1F8FF;
+    margin: 0.3rem 0;
+}
+
+.responses{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
 .btn{
     height: 1.4rem;
     border: none;
     padding: 0.2rem;
     border-radius: 3px;
+    color: #F1F8FF;
     background-color: #FF6B35;
+}
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.99);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn:active{
+    animation: click 0.7s;
 }

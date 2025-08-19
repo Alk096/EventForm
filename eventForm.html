@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/eventForm.css">
     <title>Formulaire</title>
 </head>
+
 <body>
+
+    <h1>Formulaire d'inscription</h1>
     <form action="" class="form">
         <div class="input-group">
-            <sapn class="input-label">Prénom</sapn>
-            <input class="form-control" type="text" 
-            placeholder="Prénom"
-            name="prenom">
+            <label class="input-label" for="prenom">Prénom</label>
+            <input class="form-control" type="text" placeholder="Prénom" id="prenom" name="prenom">
         </div>
         <div class="input-group">
-            <sapn class="input-label">Nom</sapn>
-            <input class="form-control" type="text"
-            placeholder="Nom"
-            name="nom">
+            <label for="nom" class="input-label">Nom</label>
+            <input class="form-control" type="text" id="nom" placeholder="Nom" name="nom">
         </div>
         <div class="input-group">
-            <sapn class="input-label">Numero de téléphone</sapn>
-            <input class="form-control" type="text"
-            placeholder="Numero de téléphone"
-            name="numeroDeTel">
+            <label for="numeroDeTel" class="input-label">Numero de téléphone</label>
+            <input id="numeroDeTel" class="form-control" type="text" placeholder="Numero de téléphone"
+                name="numeroDeTel">
         </div>
         <div class="input-group">
-            <sapn class="input-label">Série du bac</sapn>
-            <select class="form-select" name="" id="">
+            <label for="serieBac" class="input-label">Série du bac</label>
+            <select class="form-select" name="serieBac" id="serieBac">
                 <option value="A">A</option>
                 <option value="A8">A8</option>
                 <option value="D">D</option>
@@ -36,10 +35,63 @@
                 <option value="C">C</option>
             </select>
         </div>
+        <div class="question">
+            <p>Souhaitez-vous continuer vos études à l'étranger ?</p>
+            <ul class="responses">
+                <li class="reponse">
+                    <input type="radio" id="q1-oui" name="q1" value="Oui">
+                    <label for="q1-oui">Oui</label>
+                </li>
+                <li class="reponse">
+                    <input type="radio" id="q1-non" name="q1" value="Non">
+                    <label for="q1-non">Non</label>
+                </li>
+                <li class="reponse">
+                    <input type="radio" id="q1-peutetre" name="q1" value="Peut-être">
+                    <label for="q1-peutetre">Peut-être</label>
+                </li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>Préférez-vous une université publique ou privée ?</p>
+            <ul class="responses">
+                <li class="reponse">
+                    <input type="radio" id="q2-oui" name="q2" value="Oui">
+                    <label for="q2-oui">Oui</label>
+                </li>
+                <li class="reponse">
+                    <input type="radio" id="q2-non" name="q2" value="Non">
+                    <label for="q2-non">Non</label>
+                </li>
+                <li class="reponse">
+                    <input type="radio" id="q2-peutetre" name="q2" value="Peut-être">
+                    <label for="q2-peutetre">Peut-être</label>
+                </li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>Avez-vous besoin d'une bourse pour poursuivre vos études ?</p>
+            <ul class="responses">
+                <li class="reponse">
+                    <input type="radio" id="q3-oui" name="q3" value="Oui">
+                    <label for="q3-oui">Oui</label>
+                </li>
+                <li class="reponse">
+                    <input type="radio" id="q3-non" name="q3" value="Non">
+                    <label for="q3-non">Non</label>
+                </li>
+                <li class="reponse">
+                    <input type="radio" id="q3-peutetre" name="q3" value="Peut-être">
+                    <label for="q3-peutetre">Peut-être</label>
+                </li>
+            </ul>
+        </div>
+
         <button class="btn">
             Envoyer
         </button>
     </form>
     <script src="/eventForm.js"></script>
 </body>
+
 </html>
