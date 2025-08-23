@@ -102,3 +102,66 @@ h1{
 .btn:active{
     animation: click 0.7s;
 }
+
+.ticket {
+    position: relative;
+    background: linear-gradient(135deg, #f9f9f9, #e1e6eb);
+    min-height: 220px;
+    min-width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 2px dashed #c4c4c4; /* effet ticket */
+    overflow: hidden;
+}
+
+.ticket::before, 
+.ticket::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 2px solid #c4c4c4;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.ticket::before {
+    left: -13px;
+}
+
+.ticket::after {
+    right: -13px;
+}
+
+.info {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.nom,
+.prenom {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.qrCode {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

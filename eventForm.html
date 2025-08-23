@@ -4,15 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/eventForm.css">
+    <link rel="stylesheet" href="eventForm.css">
     <title>Formulaire</title>
 </head>
 
 <body>
 
-    <div id="qrcode"></div>
+    <template id="ticket">
+        <div class="ticket">
+            <div class="info">
+                <p class="prenom">
+                    Prenom : Mahamadou Alkerou
+                </p>
+                <p class="nom">
+                    Nom : Soumana Abdou
+                </p>
+            </div>
+            <div class="qrCode">
+            </div>
+        </div>
+    </template>
 
-    <h1>Formulaire d'inscription</h1>
+    <h1 class="form-title">Formulaire d'inscription</h1>
     <form action="" class="form">
         <div class="input-group">
             <label class="input-label" for="prenom">Prénom</label>
@@ -95,7 +108,7 @@
     </form>
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
     <script src="eventForm.js"></script>
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.11.0/dist/html2pdf.min.js"></script> -->
 </body>
 
 </html>

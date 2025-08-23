@@ -14,22 +14,35 @@ function getInfo() {
   return formInfo
 }
 
+function generationTicket(info){
+  const TiketTemplate = document.getElementById('ticket')
+  const tiket = TiketTemplate.content.cloneNode(true)
+
+  tiket.querySelector('.prenom').textContent = `Prènom : ${info.prenom}`
+  tiket.querySelector('.nom').textContent = `Nom : ${info.nom}`
+
 /*========= Generation du QR Code =================*/
-function generateQRCode(data) {
-  document.getElementById("qrcode").innerHTML = "";
-  new QRCode(document.getElementById("qrcode"), {
-    text: JSON.stringify(data),
+  const qrDiv = tiket.querySelector('.qrCode')
+  qrDiv.innerHTML = ""
+  const qr = document.createElement('div')
+  qrDiv.appendChild(qr)
+  new QRCode(qr, {
+    text: JSON.stringify(info),
     width: 128,
     height: 128
-  });
-}
+  })
 
+  document.body.append(tiket)
+}
 
 /*============ Submit ======*/
 const btn = document.getElementById('btn')
 btn.addEventListener('click', (e) => {
   e.preventDefault()
-  const info = getInfo()
-  console.log(info)
-  generateQRCode(info)
+
+  document.querySelector('.form').style.displaye = 'none'
+  document.querySelector('.form').style.display = 'none'
+
+  const data = getInfo()
+  generationTicket(data)
 })
